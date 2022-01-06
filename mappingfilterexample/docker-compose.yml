@@ -41,7 +41,7 @@ services:
   graphql-engine:
     image: onfinality/subql-query:latest
     ports:
-      - 3001:3001
+      - 3000:3000
     depends_on:
       - "postgres"
       - "subquery-node"
@@ -55,4 +55,4 @@ services:
     command:
       - --name=app
       - --playground
-      - --indexer=http://subquery-node:3001
+      - --indexer=http://subquery-node:3000
